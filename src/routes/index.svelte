@@ -1,17 +1,11 @@
 <script>
   import {posts} from '../posts'
+  import PostList from '../components/PostList.svelte'
 </script>
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Josh's Weblog</title>
 </svelte:head>
 
-<h1>Hello Sapper!</h1>
+<h1>Josh's Weblog</h1>
 
-{#each posts as post}
-  <article>
-    <a href={`/posts/${post.permalink}`}>
-      <h2>{post.title}</h2>
-      <p>{post.summary}</p>
-    </a>
-  </article>
-{/each}
+<PostList {posts}/>
